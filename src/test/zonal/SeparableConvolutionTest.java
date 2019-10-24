@@ -46,33 +46,12 @@ public class SeparableConvolutionTest implements Constants {
 
 		//int [] ord={0,1};
 		SeparableKernel<Byte, byte[]> sc2= new SeparableKernel<Byte, byte[]>(akern4, b,  dims);	
-		
-		/*
-		float[][] kernArray= sc.getKernelArrays();
-		int c=0;
-		for (float[] p:kernArray) {
-		
-			int[] dimz=sc.getSubDimensions(ord[c]);
-			printdim(dimz);
-			c++;
-			//System.out.println(p.length);
-			Kernel<Float, float[]> k=new Kernel<Float, float[]>(p, sc.dummy, dimz);
-		}*/
-		 
- 
-	 
-		 ImagePlus imp4 = null;
+			 
 		try {
+			ImagePlus imp4 = null;
 			imp4 = plib.imageFrom("test float",cube);
 			imp4.show();
-			 
-			
-			 
-		} catch (UnsupportedTypeException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 
+
 		 Region<Float> reg=new Region<Float>(cube,sc);
 		 // System.out.println("Region:");
 		// System.out.println(reg);
@@ -95,13 +74,9 @@ public class SeparableConvolutionTest implements Constants {
 		  Region<Float> regout2=mproc.convolveSeparable(reg,sc);
 		 
 		 ImagePlus imp3=null;
-		try {
+	
 			imp3 = plib.imageFrom("convolved byte",regout2);
-		} catch (UnsupportedTypeException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 imp3.show();
+
 		
 		 
 			PixelCube<Byte,BaseIndex> cube_b=new PixelCube<Byte,BaseIndex>(dim, pixels_byte, b);
@@ -122,13 +97,14 @@ public class SeparableConvolutionTest implements Constants {
 			  Region<Byte> regout3=mproc.convolveSeparable(reg2,sc2);
 			 
 			 
-			try {
+		
 				imp4 = plib.imageFrom("convolved byte",regout3);
+				 imp4.show();
 			} catch (UnsupportedTypeException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			 imp4.show();
+			
 			 
 			 byte[] bp=sc2.join();
 			 
