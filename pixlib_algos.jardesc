@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="C:/Applications/ImageJ/plugins/pixlib-algos-1-0.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/Pixlib_algos/pixlib_algos.jardesc" exportErrors="false" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=Pixlib_algos/src&lt;ijaux.funct"/>
+        <javaElement handleIdentifier="=Pixlib_algos/src&lt;ijaux.funct.iter"/>
+        <file path="/Pixlib_algos/.classpath"/>
+        <file path="/Pixlib_algos/.gitignore"/>
+        <javaElement handleIdentifier="=Pixlib_algos/src&lt;ijaux.hypergeom"/>
+        <file path="/Pixlib_algos/.project"/>
+        <javaElement handleIdentifier="=Pixlib_algos/src&lt;ijaux.datatype.oper"/>
+        <javaElement handleIdentifier="=Pixlib_algos/src&lt;ijaux.funct.impl"/>
+        <file path="/Pixlib_algos/README.md"/>
+        <javaElement handleIdentifier="=Pixlib_algos/src&lt;ijaux.hypergeom.convolution"/>
+        <javaElement handleIdentifier="=Pixlib_algos/src&lt;ijaux.dsp"/>
+        <javaElement handleIdentifier="=Pixlib_algos/src&lt;ijaux.hypergeom.morphology"/>
+    </selectedElements>
+</jardesc>
