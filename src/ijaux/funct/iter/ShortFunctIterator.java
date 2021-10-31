@@ -3,11 +3,10 @@ package ijaux.funct.iter;
 import ijaux.funct.SimpleFunction;
 import ijaux.iter.array.ShortForwardIterator;
 
-public class ShortFunctIterator extends ShortForwardIterator implements
-FunctionIterator<Short>
-{
+public class ShortFunctIterator extends ShortForwardIterator implements FunctionIterator<Short>{
 	
-	private short[] spixels;
+	private short[] spixels=null;
+	private SimpleFunction<Short> funct=null;
 
 	public ShortFunctIterator(Object cpixels) {
 		super(cpixels);
@@ -19,6 +18,9 @@ FunctionIterator<Short>
 		setFunct(f);
 	}
 	
+	public void setFunct(SimpleFunction<Short> f) {
+		funct=f;
+	}
 	
 	@Override
 	public <N> Short nextf(N a) {

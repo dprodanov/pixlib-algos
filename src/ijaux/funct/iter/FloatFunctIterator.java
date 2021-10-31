@@ -3,10 +3,10 @@ package ijaux.funct.iter;
 import ijaux.funct.SimpleFunction;
 import ijaux.iter.array.FloatForwardIterator;
 
-public class FloatFunctIterator extends FloatForwardIterator   implements
-	FunctionIterator<Float> 	{
+public class FloatFunctIterator extends FloatForwardIterator   implements FunctionIterator<Float> 	{
 		
-		private float[] fpixels;
+		private float[] fpixels=null;
+		private SimpleFunction<Float> funct=null;
 
 		public FloatFunctIterator(Object cpixels) {
 			super(cpixels);
@@ -18,6 +18,9 @@ public class FloatFunctIterator extends FloatForwardIterator   implements
 			setFunct(f);
 		}
 		
+		public void setFunct(SimpleFunction<Float> f) {
+			funct=f;
+		}
 		
 		@Override
 		public <N> Float nextf(N a) {

@@ -27,6 +27,7 @@ implements Cloneable {
 
 	protected ComplexAccess access;
 
+	//TODO sample
 	private SamplingWindow wnd=null;
 	
 	int dir=0;

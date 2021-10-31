@@ -7,7 +7,8 @@ public class ByteFunctIterator extends ByteForwardIterator implements
 FunctionIterator<Byte>
 {
 	
-	private byte[] bpixels;
+	private byte[] bpixels=null;
+	private SimpleFunction<Byte> funct=null;
 
 	public ByteFunctIterator(Object cpixels) {
 		super(cpixels);
@@ -20,6 +21,10 @@ FunctionIterator<Byte>
 	}
 	
 	
+	public void setFunct(SimpleFunction<Byte> f) {
+		funct=f;
+	}
+
 	@Override
 	public <N> Byte nextf(N a) {
 		final int elem= bpixels[i] & mask;

@@ -3,11 +3,10 @@ package ijaux.funct.iter;
 import ijaux.funct.SimpleFunction;
 import ijaux.iter.array.*;
 
-public class IntFunctIterator extends IntForwardIterator implements
-FunctionIterator<Integer>
-{
+public class IntFunctIterator extends IntForwardIterator implements FunctionIterator<Integer>{
 	
-	private int[] ipixels;
+	private int[] ipixels=null;
+	private SimpleFunction<Integer> funct=null;
 
 	public IntFunctIterator(Object cpixels) {
 		super(cpixels);
@@ -19,6 +18,9 @@ FunctionIterator<Integer>
 		setFunct(f);
 	}
 	
+	public void setFunct(SimpleFunction<Integer> f) {
+		funct=f;
+	}
 	
 	@Override
 	public <N> Integer nextf(N a) {

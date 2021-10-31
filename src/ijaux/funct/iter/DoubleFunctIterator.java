@@ -6,7 +6,8 @@ import ijaux.iter.array.*;
 public class DoubleFunctIterator extends DoubleForwardIterator   implements
 FunctionIterator<Double> 	{
 	
-	private double[] dpixels;
+	private double[] dpixels=null;
+	private SimpleFunction<Double> funct=null;
 
 	public DoubleFunctIterator(Object cpixels) {
 		super(cpixels);
@@ -19,6 +20,10 @@ FunctionIterator<Double> 	{
 	}
 	
 	
+	public void setFunct(SimpleFunction<Double> f) {
+		funct=f;
+	}
+
 	@Override
 	public <N> Double nextf(N a) {
 		final double elem= dpixels[i];
